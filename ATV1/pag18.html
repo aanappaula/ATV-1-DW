@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18</title>
+</head>
+<body>
+      <label class="container">Um
+        <input  class="oi" type="checkbox">
+        <span class="checkmark"></span>
+    </label>
+    <label class="radio">Dois
+        <input type="radio">
+        <span class="checkmark"></span>
+    </label>
+
+
+</body>
+</html>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+.container, .radio {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.container label, .radio label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.container input[type="checkbox"], .radio input[type="radio"] {
+    display: none; 
+}
+
+.checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-left: 10px;
+    position: relative;
+}
+
+.radio .checkmark {
+    border-radius: 50%;
+}
+
+.container input[type="checkbox"]:checked + .checkmark {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.radio input[type="radio"]:checked + .checkmark {
+    background-color: #2196F3;
+    border-color: #2196F3;
+}
+
+.container input[type="checkbox"]:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.radio input[type="radio"]:checked + .checkmark::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+</style>
